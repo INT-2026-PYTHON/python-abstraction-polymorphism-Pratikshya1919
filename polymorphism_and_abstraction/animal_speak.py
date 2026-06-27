@@ -81,3 +81,49 @@ Explanation:
 =================================================
 
 """
+# Parent Class
+class Animal:
+
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+
+# Child Class Dog
+class Dog(Animal):
+
+    def speak(self):
+        print(f"{self.name} says Woof")
+
+
+# Child Class Cat
+class Cat(Animal):
+
+    def speak(self):
+        print(f"{self.name} says Meow")
+
+
+# Child Class Cow
+class Cow(Animal):
+
+    def speak(self):
+        print(f"{self.name} says Moo")
+
+
+# Driver Code
+
+dog_name = input("Enter dog name: ")
+cat_name = input("Enter cat name: ")
+cow_name = input("Enter cow name: ")
+
+animals = [
+    Dog(dog_name),
+    Cat(cat_name),
+    Cow(cow_name)
+]
+
+print("Animal Sounds:")
+for animal in animals:
+    animal.speak()
